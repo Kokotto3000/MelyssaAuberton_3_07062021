@@ -39,10 +39,14 @@
   }
   75% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     z-index: 0;
+    -webkit-transform: scale(10);
+            transform: scale(10);
   }
 }
 
@@ -56,10 +60,14 @@
   }
   75% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
     z-index: 0;
+    -webkit-transform: scale(10);
+            transform: scale(10);
   }
 }
 

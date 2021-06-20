@@ -33,10 +33,12 @@ $tertiary: #99E2D0;
         }
         75%{
             opacity: 1;
+            transform: scale(1);
         }
         100% {
             opacity: 0;
             z-index: 0;
+            transform: scale(10);
         }
     }
     svg{
