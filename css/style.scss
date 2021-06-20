@@ -1,6 +1,73 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
 *, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: none;
+}
+
+.heart-spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $tertiary;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+    animation: 3s ease-in-out opacity;
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+            z-index: 1;
+        }
+        15%{
+            opacity: 1;
+        }
+        75%{
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+    svg{
+        fill: $secondary;
+        height: 100px;
+        width: 100px;
+        animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+        @keyframes heart {
+            0% {
+            transform: scale(0.95);
+            fill: $secondary;
+            }
+            5% {
+            transform: scale(1.1);
+            fill: $primary;
+            }
+            39% {
+            transform: scale(0.85);
+            fill: $secondary;
+            }
+            45% {
+            transform: scale(1);
+            fill: $primary;
+            }
+            60% {
+            transform: scale(0.95);
+            }
+            100% {
+            transform: scale(0.9);
+            fill: $secondary;
+            }
+        }        
+    }
 }
