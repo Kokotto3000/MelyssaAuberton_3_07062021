@@ -6,6 +6,14 @@
   outline: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .heart-spinner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,6 +32,7 @@
   height: 100vh;
   width: 100%;
   opacity: 0;
+  text-align: center;
   z-index: -1;
   -webkit-animation: 3s ease-in-out opacity;
           animation: 3s ease-in-out opacity;
@@ -73,8 +82,7 @@
 
 .heart-spinner svg {
   fill: #FF79DA;
-  height: 100px;
-  width: 100px;
+  width: 10%;
   -webkit-animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
           animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -141,5 +149,188 @@
             transform: scale(0.9);
     fill: #FF79DA;
   }
+}
+
+header {
+  -webkit-box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #353535;
+}
+
+main {
+  width: 100%;
+}
+
+.accueil-heading {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.accueil-heading .accueil-heading__localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #eaeaea;
+  width: 100%;
+}
+
+.accueil-heading .accueil-heading__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  width: 100%;
+}
+
+.accueil-heading .accueil-heading__title a {
+  display: block;
+  background-color: #FF79DA;
+  border-radius: 3rem;
+  color: white;
+  text-decoration: none;
+  width: 50%;
+}
+
+.accueil-fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.accueil-fonctionnement .accueil-fonctionnement__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.accueil-fonctionnement .accueil-fonctionnement__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.accueil-fonctionnement .accueil-fonctionnement__card p:first-child {
+  position: absolute;
+}
+
+.accueil-fonctionnement .accueil-fonctionnement__card .accueil-fonctionnement__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accueil-restaurants {
+  background-color: #f6f6f6;
+}
+
+.accueil-restaurants .accueil-restaurants__container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.accueil-restaurants .accueil-restaurants__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.accueil-restaurants .accueil-restaurants__cards a {
+  display: block;
+  width: 100%;
+}
+
+.accueil-restaurants .accueil-restaurants__cards article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 3rem;
+  height: 25rem;
+}
+
+.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-image {
+  position: relative;
+  height: 75%;
+}
+
+.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-image img {
+  border-radius: 2rem 2rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-image p {
+  background-color: #99E2D0;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-content svg {
+  width: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

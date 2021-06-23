@@ -1,6 +1,16 @@
+//CSS GENERAL
+
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
+
+$roboto: 'Roboto', sans-serif;
+$shrikhand: 'Shrikhand', cursive;
+
+$grey-very-light: #f6f6f6;
+$grey-light: #eaeaea;
+$grey-medium: #7e7e7e;
+$grey-dark: #353535;
 
 *, ::before, ::after{
     box-sizing: border-box;
@@ -9,10 +19,20 @@ $tertiary: #99E2D0;
     outline: none;
 }
 
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $roboto;
+}
+
+//SPINNER
+
 .heart-spinner{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,6 +41,7 @@ $tertiary: #99E2D0;
     height: 100vh;
     width: 100%;
     opacity: 0;
+    text-align: center;
     z-index: -1;
     animation: 3s ease-in-out opacity;
     @keyframes opacity {
@@ -42,8 +63,11 @@ $tertiary: #99E2D0;
         }
     }
     svg{
+        // position: absolute;
+        // top: 0;
+        // left: 0;
         fill: $secondary;
-        width: 50%;
+        width: 10%;
         animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
         @keyframes heart {
             0% {
@@ -70,5 +94,127 @@ $tertiary: #99E2D0;
             fill: $secondary;
             }
         }        
+    }
+}
+
+//HEADER
+
+header{
+    box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.4);
+    width: 100%;
+    .header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #353535;        
+    }
+}
+
+main{
+    width: 100%;
+}
+
+.accueil-heading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .accueil-heading__localisation{
+        display: flex;
+        justify-content: center;
+        // align-items:center;
+        background-color: #eaeaea;
+        width: 100%;
+    }
+    .accueil-heading__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f6f6f6;
+        width: 100%;
+        a{
+            display: block;
+            background-color: $secondary;
+            border-radius: 3rem;
+            color: white;
+            text-decoration: none;
+            width: 50%;
+        }
+    }
+}
+
+//FOOTER
+
+//ACCUEIL
+
+.accueil-fonctionnement{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    .accueil-fonctionnement__container{
+        display: flex;
+        flex-direction: column;
+    }
+    .accueil-fonctionnement__card{
+        display: flex;
+        position: relative;
+        p:first-child{
+            position: absolute;
+        }
+        .accueil-fonctionnement__content{
+            display: flex;
+        }
+    }
+}
+
+//RESTAURANTS
+
+.accueil-restaurants{
+    background-color: $grey-very-light;    
+    .accueil-restaurants__container{
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+    .accueil-restaurants__cards{
+        display: flex;
+        flex-direction: column;
+        a{
+            display: block;
+            width: 100%;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 3rem;
+            height: 25rem;
+            .accueil-restaurants__card-image{
+                position: relative;
+                height: 75%;
+                img{
+                    border-radius: 2rem 2rem 0 0;
+                    object-fit: cover;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                }
+                p{
+                    background-color: $tertiary;
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                }    
+            }
+            .accueil-restaurants__card-content{
+                display: flex;
+                align-items: center;
+                svg{
+                    width: 3rem;
+                }
+            }
+        }
     }
 }
