@@ -148,6 +148,9 @@ footer{
     }
     a{
         color: white;
+        &:hover, &:focus, &:active{
+            color: $secondary;
+        }
     }
     li{
         display: flex;
@@ -217,6 +220,10 @@ main{
             margin: 2rem;
             padding: 1.6rem 3rem;
             font-weight: 500;
+            &:active, &:focus{
+                background: $secondary;
+                box-shadow: none;
+            }
         }
     }
 }
@@ -224,6 +231,7 @@ main{
 .accueil-fonctionnement{
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     width: 90%;
     margin: 0 auto;
     padding: 5rem 0;
@@ -236,7 +244,15 @@ main{
     a{
         display: block;
         margin: 1rem 0;
-    }
+        width: 100%;
+        &:active .accueil-fonctionnement__card, &:focus .accueil-fonctionnement__card{
+            background-color: #f5edff;
+            box-shadow: none;
+        }
+        &:active .accueil-fonctionnement__content .fas, &:focus .accueil-fonctionnement__content .fas{
+            color: $primary;
+        }            
+    }         
     .accueil-fonctionnement__card{
         position: relative;
         background-color: $grey-very-light;
@@ -246,6 +262,7 @@ main{
         margin: 0 auto;
         border-radius: 2rem;
         font-weight: 500;
+        margin: 1rem auto;
         & > p{
             display: flex;
             justify-content: center;
@@ -260,16 +277,16 @@ main{
             height: 2.5rem;
             width: 2.5rem;
         }
-        .accueil-fonctionnement__content{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            .fas{
-                color: $grey-medium;
-                font-size: 2rem;
-                padding: 0 3rem;
-            }
-        }
+    }
+    .accueil-fonctionnement__content{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .fas{
+            color: $grey-medium;
+            font-size: 2rem;
+            padding: 0 3rem;
+        }    
     }
 }
 

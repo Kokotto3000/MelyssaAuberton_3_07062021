@@ -209,6 +209,10 @@ footer a {
   color: white;
 }
 
+footer a:hover, footer a:focus, footer a:active {
+  color: #FF79DA;
+}
+
 footer li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,6 +315,12 @@ main {
   font-weight: 500;
 }
 
+.accueil-heading .accueil-heading__title a:active, .accueil-heading .accueil-heading__title a:focus {
+  background: #FF79DA;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .accueil-fonctionnement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,6 +329,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   width: 90%;
   margin: 0 auto;
   padding: 5rem 0;
@@ -341,6 +354,17 @@ main {
 .accueil-fonctionnement a {
   display: block;
   margin: 1rem 0;
+  width: 100%;
+}
+
+.accueil-fonctionnement a:active .accueil-fonctionnement__card, .accueil-fonctionnement a:focus .accueil-fonctionnement__card {
+  background-color: #f5edff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.accueil-fonctionnement a:active .accueil-fonctionnement__content .fas, .accueil-fonctionnement a:focus .accueil-fonctionnement__content .fas {
+  color: #9356DC;
 }
 
 .accueil-fonctionnement .accueil-fonctionnement__card {
@@ -353,6 +377,7 @@ main {
   margin: 0 auto;
   border-radius: 2rem;
   font-weight: 500;
+  margin: 1rem auto;
 }
 
 .accueil-fonctionnement .accueil-fonctionnement__card > p {
@@ -377,7 +402,7 @@ main {
   width: 2.5rem;
 }
 
-.accueil-fonctionnement .accueil-fonctionnement__card .accueil-fonctionnement__content {
+.accueil-fonctionnement .accueil-fonctionnement__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,7 +414,7 @@ main {
           align-items: center;
 }
 
-.accueil-fonctionnement .accueil-fonctionnement__card .accueil-fonctionnement__content .fas {
+.accueil-fonctionnement .accueil-fonctionnement__content .fas {
   color: #7e7e7e;
   font-size: 2rem;
   padding: 0 3rem;
