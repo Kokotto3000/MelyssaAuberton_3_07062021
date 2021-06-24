@@ -12,6 +12,8 @@ $grey-light: #eaeaea;
 $grey-medium: #7e7e7e;
 $grey-dark: #353535;
 
+$card-shadow: 0px 5px 10px 5px rgba(0,0,0,0.2);
+
 *, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
@@ -25,6 +27,30 @@ html{
 
 body{
     font-family: $roboto;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+h3{
+    font-size: 2rem;
 }
 
 //SPINNER
@@ -46,11 +72,8 @@ body{
     animation: 3s ease-in-out opacity;
     @keyframes opacity {
         0% {
-            opacity: 0;
-            z-index: 1;
-        }
-        15%{
             opacity: 1;
+            z-index: 1;
         }
         75%{
             opacity: 1;
@@ -63,11 +86,8 @@ body{
         }
     }
     svg{
-        // position: absolute;
-        // top: 0;
-        // left: 0;
         fill: $secondary;
-        width: 10%;
+        width: 50%;
         animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
         @keyframes heart {
             0% {
@@ -100,15 +120,53 @@ body{
 //HEADER
 
 header{
-    box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.4);
     width: 100%;
     .header-container{
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #353535;        
+        color: #353535;
+        padding: 1.5rem 0;      
     }
 }
+
+//FOOTER
+
+footer{
+    background-color: $grey-dark;
+    color: white;
+    padding: 1rem 0 3rem 0;
+    .footer-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    h3{
+        font-family: $shrikhand;
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding: 1rem 0;
+    }
+    a{
+        color: white;
+    }
+    li{
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    strong{
+        font-weight: 400;
+    }
+    .fas{
+        margin-right: 1rem;
+    }
+    .fa-hands-helping{
+        font-size: 1rem;
+    }
+}
+
+//ACCUEIL
 
 main{
     width: 100%;
@@ -121,50 +179,96 @@ main{
     align-items: center;
     text-align: center;
     .accueil-heading__localisation{
+        box-shadow: 0 1rem 1rem -1rem rgba(0,0,0,0.5) inset;
         display: flex;
         justify-content: center;
-        // align-items:center;
-        background-color: #eaeaea;
+        background-color: $grey-light;
         width: 100%;
+        padding: 1.6rem 0;
+        color: $grey-dark;
+        font-size: 1.8rem;
+        font-weight: 500;
+        vertical-align: middle;
+        p:last-child{
+            padding: 0 3rem;
+        }
     }
     .accueil-heading__title{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #f6f6f6;
+        background-color: $grey-very-light;
         width: 100%;
+        padding: 3rem 0;
+        h1{
+            padding: 1rem 5rem;
+        }
+        h2{
+            padding: 1rem 0;
+        }
         a{
             display: block;
+            background: radial-gradient(ellipse farthest-corner at 1rem 1rem, $secondary 0%, $primary 120%);
             background-color: $secondary;
+            box-shadow: $card-shadow;
             border-radius: 3rem;
             color: white;
             text-decoration: none;
-            width: 50%;
+            margin: 2rem;
+            padding: 1.6rem 3rem;
+            font-weight: 500;
         }
     }
 }
-
-//FOOTER
-
-//ACCUEIL
 
 .accueil-fonctionnement{
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
+    padding: 5rem 0;
     .accueil-fonctionnement__container{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+    a{
+        display: block;
+        margin: 1rem 0;
     }
     .accueil-fonctionnement__card{
-        display: flex;
         position: relative;
-        p:first-child{
+        background-color: $grey-very-light;
+        box-shadow: $card-shadow;
+        padding: 2.5rem 0;
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 2rem;
+        font-weight: 500;
+        & > p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary;
+            border-radius: 50%;
+            color: white;
             position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            height: 2.5rem;
+            width: 2.5rem;
         }
         .accueil-fonctionnement__content{
             display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .fas{
+                color: $grey-medium;
+                font-size: 2rem;
+                padding: 0 3rem;
+            }
         }
     }
 }
@@ -172,11 +276,14 @@ main{
 //RESTAURANTS
 
 .accueil-restaurants{
-    background-color: $grey-very-light;    
+    background-color: $grey-very-light;
+    padding: 3rem 0;
     .accueil-restaurants__container{
         width: 90%;
-        margin: 0 auto;
-        
+        margin: 0 auto;   
+    }
+    h3{
+        padding: 2rem 0;
     }
     .accueil-restaurants__cards{
         display: flex;
@@ -184,16 +291,18 @@ main{
         a{
             display: block;
             width: 100%;
+            margin: 1rem 0;
         }
-        article{
+        article.accueil-restaurants__card{
             display: flex;
             flex-direction: column;
             background-color: white;
-            border-radius: 3rem;
+            box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.2);
+            border-radius: 2rem;
             height: 25rem;
             .accueil-restaurants__card-image{
                 position: relative;
-                height: 75%;
+                height: 72%;
                 img{
                     border-radius: 2rem 2rem 0 0;
                     object-fit: cover;
@@ -203,15 +312,29 @@ main{
                 }
                 p{
                     background-color: $tertiary;
+                    color: #008766;
+                    border-radius: .3rem;
                     position: absolute;
-                    top: 1rem;
-                    right: 1rem;
+                    top: 1.5rem;
+                    right: 1.5rem;
+                    padding: 0.6rem 1.2rem;
+                    font-size: 1.2rem;
+                    font-weight: 500;
                 }    
             }
             .accueil-restaurants__card-content{
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
+                height: 28%;
+                padding: 0 1rem;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
                 svg{
+                    margin: 1rem;
                     width: 3rem;
                 }
             }

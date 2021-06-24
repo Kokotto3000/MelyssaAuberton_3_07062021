@@ -12,6 +12,30 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .heart-spinner {
@@ -40,11 +64,8 @@ body {
 
 @-webkit-keyframes opacity {
   0% {
-    opacity: 0;
-    z-index: 1;
-  }
-  15% {
     opacity: 1;
+    z-index: 1;
   }
   75% {
     opacity: 1;
@@ -61,11 +82,8 @@ body {
 
 @keyframes opacity {
   0% {
-    opacity: 0;
-    z-index: 1;
-  }
-  15% {
     opacity: 1;
+    z-index: 1;
   }
   75% {
     opacity: 1;
@@ -82,7 +100,7 @@ body {
 
 .heart-spinner svg {
   fill: #FF79DA;
-  width: 10%;
+  width: 50%;
   -webkit-animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
           animation: heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -152,8 +170,6 @@ body {
 }
 
 header {
-  -webkit-box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.4);
   width: 100%;
 }
 
@@ -168,6 +184,52 @@ header .header-container {
       -ms-flex-align: center;
           align-items: center;
   color: #353535;
+  padding: 1.5rem 0;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1rem 0 3rem 0;
+}
+
+footer .footer-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+footer strong {
+  font-weight: 400;
+}
+
+footer .fas {
+  margin-right: 1rem;
+}
+
+footer .fa-hands-helping {
+  font-size: 1rem;
 }
 
 main {
@@ -190,6 +252,8 @@ main {
 }
 
 .accueil-heading .accueil-heading__localisation {
+  -webkit-box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, 0.5) inset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,6 +262,15 @@ main {
           justify-content: center;
   background-color: #eaeaea;
   width: 100%;
+  padding: 1.6rem 0;
+  color: #353535;
+  font-size: 1.8rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.accueil-heading .accueil-heading__localisation p:last-child {
+  padding: 0 3rem;
 }
 
 .accueil-heading .accueil-heading__title {
@@ -213,15 +286,29 @@ main {
           align-items: center;
   background-color: #f6f6f6;
   width: 100%;
+  padding: 3rem 0;
+}
+
+.accueil-heading .accueil-heading__title h1 {
+  padding: 1rem 5rem;
+}
+
+.accueil-heading .accueil-heading__title h2 {
+  padding: 1rem 0;
 }
 
 .accueil-heading .accueil-heading__title a {
   display: block;
+  background: radial-gradient(ellipse farthest-corner at 1rem 1rem, #FF79DA 0%, #9356DC 120%);
   background-color: #FF79DA;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 3rem;
   color: white;
   text-decoration: none;
-  width: 50%;
+  margin: 2rem;
+  padding: 1.6rem 3rem;
+  font-weight: 500;
 }
 
 .accueil-fonctionnement {
@@ -234,6 +321,7 @@ main {
           flex-direction: column;
   width: 90%;
   margin: 0 auto;
+  padding: 5rem 0;
 }
 
 .accueil-fonctionnement .accueil-fonctionnement__container {
@@ -244,32 +332,81 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.accueil-fonctionnement a {
+  display: block;
+  margin: 1rem 0;
 }
 
 .accueil-fonctionnement .accueil-fonctionnement__card {
+  position: relative;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem 0;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+.accueil-fonctionnement .accueil-fonctionnement__card > p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-}
-
-.accueil-fonctionnement .accueil-fonctionnement__card p:first-child {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: white;
   position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .accueil-fonctionnement .accueil-fonctionnement__card .accueil-fonctionnement__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accueil-fonctionnement .accueil-fonctionnement__card .accueil-fonctionnement__content .fas {
+  color: #7e7e7e;
+  font-size: 2rem;
+  padding: 0 3rem;
 }
 
 .accueil-restaurants {
   background-color: #f6f6f6;
+  padding: 3rem 0;
 }
 
 .accueil-restaurants .accueil-restaurants__container {
   width: 90%;
   margin: 0 auto;
+}
+
+.accueil-restaurants h3 {
+  padding: 2rem 0;
 }
 
 .accueil-restaurants .accueil-restaurants__cards {
@@ -285,9 +422,10 @@ main {
 .accueil-restaurants .accueil-restaurants__cards a {
   display: block;
   width: 100%;
+  margin: 1rem 0;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article {
+.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,16 +434,18 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: white;
-  border-radius: 3rem;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
   height: 25rem;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-image {
+.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-image {
   position: relative;
-  height: 75%;
+  height: 72%;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-image img {
+.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-image img {
   border-radius: 2rem 2rem 0 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -314,23 +454,47 @@ main {
   width: 100%;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-image p {
+.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-image p {
   background-color: #99E2D0;
+  color: #008766;
+  border-radius: .3rem;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-content {
+.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 28%;
+  padding: 0 1rem;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article .accueil-restaurants__card-content svg {
+.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-content svg {
+  margin: 1rem;
   width: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
