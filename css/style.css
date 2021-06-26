@@ -183,8 +183,24 @@ header .header-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   color: #353535;
-  padding: 1.5rem 0;
+  padding: 3rem 0 1.5rem 0;
+}
+
+header .header-container .fa-arrow-left {
+  color: #353535;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+header .header-container .fa-arrow-left:hover, header .header-container .fa-arrow-left:active, header .header-container .fa-arrow-left:focus {
+  color: #FF79DA;
+  scale: 1.1;
 }
 
 footer {
@@ -211,6 +227,7 @@ footer a {
 
 footer a:hover, footer a:focus, footer a:active {
   color: #FF79DA;
+  scale: 1.1;
 }
 
 footer li {
@@ -313,6 +330,12 @@ main {
   margin: 2rem;
   padding: 1.6rem 3rem;
   font-weight: 500;
+}
+
+.accueil-heading .accueil-heading__title a:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .accueil-heading .accueil-heading__title a:active, .accueil-heading .accueil-heading__title a:focus {
@@ -450,7 +473,7 @@ main {
   margin: 1rem 0;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card {
+.accueil-restaurants article.accueil-restaurants__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,12 +488,12 @@ main {
   height: 25rem;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-image {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-image {
   position: relative;
   height: 72%;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-image img {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-image img {
   border-radius: 2rem 2rem 0 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -479,7 +502,7 @@ main {
   width: 100%;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-image p {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-image p {
   background-color: #99E2D0;
   color: #008766;
   border-radius: .3rem;
@@ -491,7 +514,7 @@ main {
   font-weight: 500;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-content {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,7 +528,7 @@ main {
   padding: 0 1rem;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-content div {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,8 +541,237 @@ main {
           justify-content: space-between;
 }
 
-.accueil-restaurants .accueil-restaurants__cards article.accueil-restaurants__card .accueil-restaurants__card-content svg {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg {
   margin: 1rem;
   width: 3rem;
+  cursor: pointer;
+}
+
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg path {
+  stroke: black;
+  stroke-width: 30;
+  fill: transparent;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+}
+
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg:hover path, .accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg:active path, .accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg:focus path {
+  -webkit-animation: heart-like 2s ease forwards;
+          animation: heart-like 2s ease forwards;
+  fill: url("#linearGradient");
+  stroke: url("#linearGradient");
+}
+
+@-webkit-keyframes heart-like {
+  0% {
+    fill: url("#linearGradient");
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke-dasharray: 90;
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 90;
+  }
+  50% {
+    stroke-opacity: 0;
+  }
+  80% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 180;
+  }
+  100% {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+    stroke: url("#linearGradient");
+    stroke-dashoffset: 10;
+  }
+}
+
+@keyframes heart-like {
+  0% {
+    fill: url("#linearGradient");
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke-dasharray: 90;
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 90;
+  }
+  50% {
+    stroke-opacity: 0;
+  }
+  80% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 180;
+  }
+  100% {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+    stroke: url("#linearGradient");
+    stroke-dashoffset: 10;
+  }
+}
+
+.restaurant {
+  background: no-repeat top/110% url("../img/restaurants/la-palette-du-gout-restaurant.jpg");
+}
+
+.restaurant__hero {
+  width: 100%;
+  height: 35vh;
+}
+
+.restaurant__menu {
+  background-color: #eaeaea;
+  border-radius: 4rem 4rem 0 0;
+}
+
+.restaurant__menu .restaurant__menu-container {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurant__menu a {
+  display: block;
+  background: radial-gradient(ellipse farthest-corner at 1rem 1rem, #FF79DA 0%, #9356DC 120%);
+  background-color: #FF79DA;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 2rem;
+  padding: 1.6rem 0;
+  font-weight: 500;
+  width: 50%;
+}
+
+.restaurant__menu a:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.restaurant__menu a:active, .restaurant__menu a:focus {
+  background: #FF79DA;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.restaurant__menu-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.restaurant__menu-title svg {
+  margin: 1rem;
+  width: 3rem;
+  cursor: pointer;
+}
+
+.restaurant__menu-title svg path {
+  stroke: black;
+  stroke-width: 30;
+  fill: transparent;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+}
+
+.restaurant__menu-title svg:hover path, .restaurant__menu-title svg:active path, .restaurant__menu-title svg:focus path {
+  -webkit-animation: heart-like 2s ease forwards;
+          animation: heart-like 2s ease forwards;
+  fill: url("#linearGradient");
+  stroke: url("#linearGradient");
+}
+
+@keyframes heart-like {
+  0% {
+    fill: url("#linearGradient");
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke-dasharray: 90;
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 90;
+  }
+  50% {
+    stroke-opacity: 0;
+  }
+  80% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 180;
+  }
+  100% {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+    stroke: url("#linearGradient");
+    stroke-dashoffset: 10;
+  }
+}
+
+.restaurant__menu-section {
+  width: 100%;
+}
+
+.restaurant__menu-section h2 {
+  text-transform: uppercase;
+}
+
+.restaurant__menu-section .restaurant__menu-section-underline {
+  width: 3rem;
+  height: .3rem;
+  background-color: #99E2D0;
+}
+
+.restaurant__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem 0;
+  margin: 0 auto;
+  border-radius: 2rem;
+  font-weight: 500;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.restaurant__card .accueil-restaurants__card-content {
+  text-overflow: ellipsis;
+}
+
+.restaurant__card > p:last-child {
+  display: none;
+}
+
+.restaurant__card:hover > p:last-child {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
