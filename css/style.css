@@ -702,8 +702,8 @@ main {
 }
 
 .restaurant__menu-title svg:hover path, .restaurant__menu-title svg:active path, .restaurant__menu-title svg:focus path {
-  -webkit-animation: heart-like 2s ease forwards;
-          animation: heart-like 2s ease forwards;
+  -webkit-animation: heart-like 2s ease both;
+          animation: heart-like 2s ease both;
   fill: url("#linearGradient");
   stroke: url("#linearGradient");
 }
@@ -749,29 +749,131 @@ main {
 }
 
 .restaurant__card {
+  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #f6f6f6;
-  -webkit-box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
-  padding: 2.5rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-color: white;
   margin: 0 auto;
   border-radius: 2rem;
   font-weight: 500;
   margin: 1rem auto;
   width: 100%;
+  overflow: hidden;
+  height: 7rem;
 }
 
-.restaurant__card .accueil-restaurants__card-content {
+.restaurant__card:hover .restaurant__card-price::after {
+  width: 7rem;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.restaurant__card:hover .restaurant__card-icon {
+  left: 50%;
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+}
+
+.restaurant__card-infos {
+  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+  margin: auto 0;
 }
 
-.restaurant__card > p:last-child {
-  display: none;
+.restaurant__card-infos h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.restaurant__card:hover > p:last-child {
-  display: block;
+.restaurant__card-infos p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.restaurant__card-price {
+  color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+}
+
+.restaurant__card-price::after {
+  width: 0;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  content: '';
+  background: #99E2D0;
+}
+
+.restaurant__card-price div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.restaurant__card-icon {
+  color: white;
+  position: absolute;
+  left: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.restaurant__card-icon p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurant__card-icon p .fa-check-circle {
+  font-size: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
