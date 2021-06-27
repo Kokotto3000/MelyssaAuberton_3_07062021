@@ -466,23 +466,24 @@ main{
     font-weight: 300;
     padding: 3rem 0;
     width: 100%;
-    svg{
-        margin: 1rem;
+    button{
+        border: none;
+        background: none;
         width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
         cursor: pointer;
         path{
             stroke: black;
             stroke-width: 30;
             fill: transparent;
-            stroke-dasharray: 10;
-            stroke-dashoffset: 10;
+            stroke-dasharray: 0;
+            stroke-dashoffset: 10;                             
         }
-        &:hover path, &:active path, &:focus path{                
-        animation: heart-like 2s ease both;
-        // animation-fill-mode: forwards;
-        fill: url('#linearGradient');
-        stroke: url('#linearGradient');
-        }
+        &:hover path, &:focus path, &:active path{                
+            animation: 2s heart-like forwards;
+        }     
+        
         @keyframes heart-like{
             0%{
                 fill: url('#linearGradient');
@@ -493,17 +494,15 @@ main{
             }40%{
                 stroke-dashoffset: 90;
             }50%{
-                stroke-opacity: 0;
+                // stroke-opacity: 0;
             }80%{
                 stroke-dasharray: 0;
                 stroke-dashoffset: 180;
             }100%{
-                stroke-opacity: 1;
+                stroke-opacity: 0;
                 fill-opacity: 1;
-                // fill: url('#linearGradient');
+                fill: url('#linearGradient');
                 stroke: url('#linearGradient');
-                stroke-dashoffset: 10;
-                // 180
             }
         }        
     }
@@ -534,16 +533,17 @@ main{
     width: 100%;
     overflow: hidden;
     height: 7rem;
+    
     &:hover .restaurant__card-price::after{
         width: 7rem;
         transform: translateX(0);
-        transition: all 2s;
         transform-origin: right;
+                
     }
     &:hover .restaurant__card-icon{
         left: 50%;
         transform: rotate(720deg);
-        transition: all 3s ease;
+        
     }
 }
 .restaurant__card-infos{
@@ -575,7 +575,8 @@ main{
         height: 100%;
         transform: translateX(100%);
         content: '';
-        background: $tertiary;   
+        background: $tertiary;  
+        transition: 1s all 0.1s ease; 
     }
     div:first-child{
         display: flex;
@@ -593,6 +594,7 @@ main{
     justify-content: center;
     align-items: center;
     height: 100%;
+    transition: 1s all ease;
     p{
         display: flex;
         justify-content: center;

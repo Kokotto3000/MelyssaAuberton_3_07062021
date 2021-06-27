@@ -687,25 +687,26 @@ main {
   width: 100%;
 }
 
-.restaurant__menu-title svg {
-  margin: 1rem;
+.restaurant__menu-title button {
+  border: none;
+  background: none;
   width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.restaurant__menu-title svg path {
+.restaurant__menu-title button path {
   stroke: black;
   stroke-width: 30;
   fill: transparent;
-  stroke-dasharray: 10;
+  stroke-dasharray: 0;
   stroke-dashoffset: 10;
 }
 
-.restaurant__menu-title svg:hover path, .restaurant__menu-title svg:active path, .restaurant__menu-title svg:focus path {
-  -webkit-animation: heart-like 2s ease both;
-          animation: heart-like 2s ease both;
-  fill: url("#linearGradient");
-  stroke: url("#linearGradient");
+.restaurant__menu-title button:hover path, .restaurant__menu-title button:focus path, .restaurant__menu-title button:active path {
+  -webkit-animation: 2s heart-like forwards;
+          animation: 2s heart-like forwards;
 }
 
 @keyframes heart-like {
@@ -720,17 +721,16 @@ main {
     stroke-dashoffset: 90;
   }
   50% {
-    stroke-opacity: 0;
   }
   80% {
     stroke-dasharray: 0;
     stroke-dashoffset: 180;
   }
   100% {
-    stroke-opacity: 1;
+    stroke-opacity: 0;
     fill-opacity: 1;
+    fill: url("#linearGradient");
     stroke: url("#linearGradient");
-    stroke-dashoffset: 10;
   }
 }
 
@@ -774,8 +774,6 @@ main {
   width: 7rem;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: all 2s;
-  transition: all 2s;
   -webkit-transform-origin: right;
           transform-origin: right;
 }
@@ -784,8 +782,6 @@ main {
   left: 50%;
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
 }
 
 .restaurant__card-infos {
@@ -825,6 +821,8 @@ main {
           transform: translateX(100%);
   content: '';
   background: #99E2D0;
+  -webkit-transition: 1s all 0.1s ease;
+  transition: 1s all 0.1s ease;
 }
 
 .restaurant__card-price div:first-child {
@@ -859,6 +857,8 @@ main {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
 }
 
 .restaurant__card-icon p {
