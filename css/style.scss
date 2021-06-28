@@ -368,15 +368,19 @@ main{
                 flex-direction: column;
                 justify-content: space-between;
             }
-            svg{
-                margin: 1rem;
+            button{
+                border: none;
+                background: none;
                 width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
                 cursor: pointer;
+                margin-right: 1.5rem;
                 path{
                     stroke: black;
                     stroke-width: 30;
                     fill: transparent;
-                    stroke-dasharray: 10;
+                    stroke-dasharray: 0;
                     stroke-dashoffset: 10;
                 }
                 &:hover path, &:active path, &:focus path{                
@@ -461,11 +465,14 @@ main{
 .restaurant__menu-title{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-family: $shrikhand;
-    font-weight: 300;
+    align-items: center;    
     padding: 3rem 0;
     width: 100%;
+    h1{
+        font-size: 2.8rem;
+        font-family: $shrikhand;
+        font-weight: 300;
+    }
     button{
         border: none;
         background: none;
@@ -473,6 +480,7 @@ main{
         height: 3rem;
         border-radius: 50%;
         cursor: pointer;
+        margin-right: 1.5rem;
         path{
             stroke: black;
             stroke-width: 30;
@@ -510,13 +518,18 @@ main{
 
 .restaurant__menu-section{
     width: 100%;
+    margin-bottom: 2rem;
     h2{
         text-transform: uppercase;
-    }
-    .restaurant__menu-section-underline{
-    width: 3rem;
-    height: .3rem;
-    background-color: $tertiary;
+        font-weight: 300;
+        &::after{
+            content: '';
+            background: $tertiary;
+            display: block;
+            width: 4.5rem;
+            height: 0.3rem;
+            margin: .5rem 0;
+        }
     }
 }
 
@@ -529,40 +542,39 @@ main{
     margin: 0 auto;
     border-radius: 2rem;
     font-weight: 500;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     width: 100%;
     overflow: hidden;
-    height: 7rem;
-    
-    &:hover .restaurant__card-price::after{
+    &:hover .restaurant__card-price::after, &:active .restaurant__card-price::after, &:focus .restaurant__card-price::after{
         width: 7rem;
         transform: translateX(0);
-        transform-origin: right;
-                
+        transform-origin: right;           
     }
-    &:hover .restaurant__card-icon{
+    &:hover .restaurant__card-icon, &:active .restaurant__card-icon, &:focus .restaurant__card-icon{
         left: 50%;
-        transform: rotate(720deg);
-        
+        transform: rotate(720deg);    
     }
 }
+
 .restaurant__card-infos{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    // vertical-align: middle;
-    // flex:1;
-    // min-width: 0;
-    margin: auto 0;
+    padding: 1.3rem;
     h3{
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        font-weight: 600;
+        font-size: 1.8rem;
+        margin: .5rem 0;
     }
     p{
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        font-weight: 300;
+        font-size: 1.5rem;
     }
 }
 .restaurant__card-price{
@@ -582,6 +594,7 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        margin: auto 2rem 1.3rem auto;
     }
 }
 .restaurant__card-icon{

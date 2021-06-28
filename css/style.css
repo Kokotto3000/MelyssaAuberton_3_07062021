@@ -541,21 +541,25 @@ main {
           justify-content: space-between;
 }
 
-.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg {
-  margin: 1rem;
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content button {
+  border: none;
+  background: none;
   width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
   cursor: pointer;
+  margin-right: 1.5rem;
 }
 
-.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg path {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content button path {
   stroke: black;
   stroke-width: 30;
   fill: transparent;
-  stroke-dasharray: 10;
+  stroke-dasharray: 0;
   stroke-dashoffset: 10;
 }
 
-.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg:hover path, .accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg:active path, .accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content svg:focus path {
+.accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content button:hover path, .accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content button:active path, .accueil-restaurants article.accueil-restaurants__card .accueil-restaurants__card-content button:focus path {
   -webkit-animation: heart-like 2s ease forwards;
           animation: heart-like 2s ease forwards;
   fill: url("#linearGradient");
@@ -681,10 +685,14 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Shrikhand", cursive;
-  font-weight: 300;
   padding: 3rem 0;
   width: 100%;
+}
+
+.restaurant__menu-title h1 {
+  font-size: 2.8rem;
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
 }
 
 .restaurant__menu-title button {
@@ -694,6 +702,7 @@ main {
   height: 3rem;
   border-radius: 50%;
   cursor: pointer;
+  margin-right: 1.5rem;
 }
 
 .restaurant__menu-title button path {
@@ -736,16 +745,21 @@ main {
 
 .restaurant__menu-section {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .restaurant__menu-section h2 {
   text-transform: uppercase;
+  font-weight: 300;
 }
 
-.restaurant__menu-section .restaurant__menu-section-underline {
-  width: 3rem;
-  height: .3rem;
-  background-color: #99E2D0;
+.restaurant__menu-section h2::after {
+  content: '';
+  background: #99E2D0;
+  display: block;
+  width: 4.5rem;
+  height: 0.3rem;
+  margin: .5rem 0;
 }
 
 .restaurant__card {
@@ -764,13 +778,12 @@ main {
   margin: 0 auto;
   border-radius: 2rem;
   font-weight: 500;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   width: 100%;
   overflow: hidden;
-  height: 7rem;
 }
 
-.restaurant__card:hover .restaurant__card-price::after {
+.restaurant__card:hover .restaurant__card-price::after, .restaurant__card:active .restaurant__card-price::after, .restaurant__card:focus .restaurant__card-price::after {
   width: 7rem;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -778,7 +791,7 @@ main {
           transform-origin: right;
 }
 
-.restaurant__card:hover .restaurant__card-icon {
+.restaurant__card:hover .restaurant__card-icon, .restaurant__card:active .restaurant__card-icon, .restaurant__card:focus .restaurant__card-icon {
   left: 50%;
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
@@ -788,19 +801,24 @@ main {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin: auto 0;
+  padding: 1.3rem;
 }
 
 .restaurant__card-infos h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: .5rem 0;
 }
 
 .restaurant__card-infos p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .restaurant__card-price {
@@ -836,6 +854,7 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin: auto 2rem 1.3rem auto;
 }
 
 .restaurant__card-icon {
