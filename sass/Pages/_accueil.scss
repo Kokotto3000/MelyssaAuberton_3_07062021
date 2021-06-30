@@ -1,0 +1,230 @@
+//ACCUEIL
+
+
+
+.accueil-heading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .accueil-heading__localisation{
+        box-shadow: 0 1rem 1rem -1rem rgba(0,0,0,0.5) inset;
+        display: flex;
+        justify-content: center;
+        background-color: $grey-light;
+        width: 100%;
+        padding: 1.6rem 0;
+        color: $grey-dark;
+        font-size: 1.8rem;
+        font-weight: 500;
+        vertical-align: middle;
+        p:last-child{
+            padding: 0 3rem;
+        }
+    }
+    .accueil-heading__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $grey-very-light;
+        width: 100%;
+        padding: 3rem 0;
+        h1{
+            padding: 1rem 5rem;
+        }
+        h2{
+            padding: 1rem 0;
+        }
+        a{
+            display: block;
+            background: radial-gradient(ellipse farthest-corner at 1rem 1rem, $secondary 0%, $primary 120%);
+            background-color: $secondary;
+            box-shadow: $card-shadow;
+            border-radius: 3rem;
+            color: white;
+            text-decoration: none;
+            margin: 2rem;
+            padding: 1.6rem 3rem;
+            font-weight: 500;            
+            &:hover{
+                opacity: 0.9;
+                box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.3);
+            }
+            &:active, &:focus{
+                background: $secondary;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.accueil-fonctionnement{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rem 0;
+    .accueil-fonctionnement__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+    a{
+        display: block;
+        margin: 1rem 0;
+        width: 100%;
+        &:active .accueil-fonctionnement__card, &:focus .accueil-fonctionnement__card{
+            background-color: #f5edff;
+            box-shadow: none;
+        }
+        &:active .accueil-fonctionnement__content .fas, &:focus .accueil-fonctionnement__content .fas{
+            color: $primary;
+        }            
+    }         
+    .accueil-fonctionnement__card{
+        position: relative;
+        background-color: $grey-very-light;
+        box-shadow: $card-shadow;
+        padding: 2.5rem 0;
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 2rem;
+        font-weight: 500;
+        margin: 1rem auto;
+        & > p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary;
+            border-radius: 50%;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+    .accueil-fonctionnement__content{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .fas{
+            color: $grey-medium;
+            font-size: 2rem;
+            padding: 0 3rem;
+        }    
+    }
+}
+
+.accueil-restaurants{
+    background-color: $grey-very-light;
+    padding: 3rem 0;
+    .accueil-restaurants__container{
+        width: 90%;
+        margin: 0 auto;   
+    }
+    h3{
+        padding: 2rem 0;
+    }
+    .accueil-restaurants__cards{
+        display: flex;
+        flex-direction: column;
+        a{
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+        }
+    }
+    article.accueil-restaurants__card{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.2);
+        border-radius: 2rem;
+        height: 25rem;
+        .accueil-restaurants__card-image{
+            position: relative;
+            height: 72%;
+            img{
+                border-radius: 2rem 2rem 0 0;
+                object-fit: cover;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+            }
+            p{
+                background-color: $tertiary;
+                color: #008766;
+                border-radius: .3rem;
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                padding: 0.6rem 1.2rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }    
+        }
+        .accueil-restaurants__card-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 28%;
+            padding: 0 1rem;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            button{
+                border: none;
+                background: none;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-right: 1.5rem;
+                path{
+                    stroke: black;
+                    stroke-width: 30;
+                    fill: transparent;
+                    stroke-dasharray: 0;
+                    stroke-dashoffset: 10;
+                }
+                &:hover path, &:active path, &:focus path{                
+                animation: heart-like 2s ease forwards;
+                // animation-fill-mode: forwards;
+                fill: url('#linearGradient');
+                stroke: url('#linearGradient');
+                }
+                @keyframes heart-like{
+                    0%{
+                        fill: url('#linearGradient');
+                        fill-opacity: 0;
+                        stroke-opacity: 1;
+                        stroke-dasharray: 90;
+                        stroke-dashoffset: 0;
+                    }40%{
+                        stroke-dashoffset: 90;
+                    }50%{
+                        stroke-opacity: 0;
+                    }80%{
+                        stroke-dasharray: 0;
+                        stroke-dashoffset: 180;
+                    }100%{
+                        stroke-opacity: 1;
+                        fill-opacity: 1;
+                        // fill: url('#linearGradient');
+                        stroke: url('#linearGradient');
+                        stroke-dashoffset: 10;
+                        // 180
+                    }
+                }        
+            }
+        }             
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "ohmyfood - projet 3 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kokotto3000/MelyssaAuberton_3_07062021.git"
+  },
+  "author": "Kokotto3000",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kokotto3000/MelyssaAuberton_3_07062021/issues"
+  },
+  "homepage": "https://github.com/Kokotto3000/MelyssaAuberton_3_07062021#readme"
+}
