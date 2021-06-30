@@ -4,7 +4,8 @@
   "description": "ohmyfood - projet 3 OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Kokotto3000/MelyssaAuberton_3_07062021/issues"
   },
-  "homepage": "https://github.com/Kokotto3000/MelyssaAuberton_3_07062021#readme"
+  "homepage": "https://github.com/Kokotto3000/MelyssaAuberton_3_07062021#readme",
+  "browserslist": "last 4 versions"
 }
