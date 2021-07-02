@@ -1,0 +1,37 @@
+@mixin restaurant($restaurants){
+    @each $restaurant in $restaurants{
+        .restaurant--#{$restaurant}{
+            background: no-repeat top/110% url('../img/restaurants/#{$restaurant}.jpg');
+        }        
+    }
+}
+
+@mixin restaurant-card{
+    @for $i from 1 through 4{
+        .restaurant__card--#{$i} {
+            box-shadow: $card-shadow;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            background-color: white;
+            margin: 0 auto;
+            border-radius: 2rem;
+            font-weight: 500;
+            margin: 1.5rem auto;
+            width: 100%;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(100px);
+            animation: 3s intro 1s*$i ease-in-out forwards;    
+            &:hover .restaurant__card-price::after, &:active .restaurant__card-price::after, &:focus .restaurant__card-price::after{
+                width: 7rem;
+                transform: translateX(0);
+                transform-origin: right;           
+            }
+            &:hover .restaurant__card-icon, &:active .restaurant__card-icon, &:focus .restaurant__card-icon{
+                left: 50%;
+                transform: rotate(720deg);    
+            }
+        }
+    }
+}
