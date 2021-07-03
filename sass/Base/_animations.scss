@@ -1,0 +1,77 @@
+@keyframes opacity {
+    0% {
+        opacity: 1;
+        z-index: 10;
+    }
+    75%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        z-index: 3;
+        transform: scale(10);
+    }
+}
+
+@keyframes heart {
+    0% {
+    transform: scale(0.95);
+    fill: $secondary;
+    }
+    5% {
+    transform: scale(1.1);
+    fill: $primary;
+    }
+    39% {
+    transform: scale(0.85);
+    fill: $secondary;
+    }
+    45% {
+    transform: scale(1);
+    fill: $primary;
+    }
+    60% {
+    transform: scale(0.95);
+    }
+    100% {
+    transform: scale(0.9);
+    fill: $secondary;
+    }
+}        
+
+@keyframes heart-like{
+    0%{
+        fill: url('#linearGradient');
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke-dasharray: 90;
+        stroke-dashoffset: 0;
+    }40%{
+        stroke-dashoffset: 90;
+    }50%{
+        stroke-opacity: 0;
+    }80%{
+        stroke-dasharray: 0;
+        stroke-dashoffset: 180;
+    }100%{
+        stroke-opacity: 1;
+        fill-opacity: 1;
+        fill: url('#linearGradient');
+        stroke: url('#linearGradient');
+        stroke-dashoffset: 10;
+    }
+}
+
+@keyframes intro {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

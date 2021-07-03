@@ -1,9 +1,12 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 
+@import "./Base/reset";
 @import "./Base/base";
+@import "./Base/animations";
 
 @import "./Components/spinner";
+@import "./Components/buttons";
 
 @import "./Layouts/header";
 @import "./Layouts/main";

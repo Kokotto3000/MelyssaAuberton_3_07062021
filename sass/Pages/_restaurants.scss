@@ -1,5 +1,3 @@
-//RESTAURANTS
-
 @include restaurant($restaurants);
 
 .restaurant__hero{
@@ -17,27 +15,8 @@
         flex-direction: column;
         align-items: center;
     }
-    a{
-        display: block;
-        background: radial-gradient(ellipse farthest-corner at 1rem 1rem, $secondary 0%, $primary 120%);
-        background-color: $secondary;
-        box-shadow: $card-shadow;
-        border-radius: 3rem;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        margin: 2rem;
-        padding: 1.6rem 0;
-        font-weight: 500;
+    .btn-pill{
         width: 50%;
-        &:hover{
-            opacity: 0.9;
-            box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.3);
-        }
-        &:active, &:focus{
-            background: $secondary;
-            box-shadow: none;
-        }
     }
 }
 
@@ -52,46 +31,8 @@
         font-family: $shrikhand;
         font-weight: 300;
     }
-    button{
-        border: none;
-        background: none;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        cursor: pointer;
+    .btn-heart{
         margin-right: 1.5rem;
-        path{
-            stroke: black;
-            stroke-width: 30;
-            fill: transparent;
-            stroke-dasharray: 0;
-            stroke-dashoffset: 10;                             
-        }
-        &:hover path, &:focus path, &:active path{                
-            animation: 2s heart-like forwards;
-        }     
-        
-        @keyframes heart-like{
-            0%{
-                fill: url('#linearGradient');
-                fill-opacity: 0;
-                stroke-opacity: 1;
-                stroke-dasharray: 90;
-                stroke-dashoffset: 0;
-            }40%{
-                stroke-dashoffset: 90;
-            }50%{
-                // stroke-opacity: 0;
-            }80%{
-                stroke-dasharray: 0;
-                stroke-dashoffset: 180;
-            }100%{
-                stroke-opacity: 0;
-                fill-opacity: 1;
-                fill: url('#linearGradient');
-                stroke: url('#linearGradient');
-            }
-        }        
     }
 }
 
@@ -112,12 +53,31 @@
     }
 }
 
-@include restaurant-card;
-
-@keyframes intro {
-    to{
-        opacity: 1;
-        transform: translateY(0);
+@for $i from 1 through 4{
+    .restaurant__card--#{$i} {
+        @include card-shadow;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        background-color: white;
+        margin: 0 auto;
+        border-radius: 2rem;
+        font-weight: 500;
+        margin: 1.5rem auto;
+        width: 100%;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(2rem);
+        animation: 1500ms intro 2000ms+$i*250 ease-in-out forwards;    
+        &:hover .restaurant__card-price::after, &:active .restaurant__card-price::after, &:focus .restaurant__card-price::after{
+            width: 7rem;
+            transform: translateX(0);
+            transform-origin: right;           
+        }
+        &:hover .restaurant__card-icon, &:active .restaurant__card-icon, &:focus .restaurant__card-icon{
+            left: 50%;
+            transform: rotate(720deg);    
+        }
     }
 }
 
