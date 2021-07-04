@@ -1,13 +1,24 @@
 @mixin restaurant($restaurants){
     @each $restaurant in $restaurants{
         .restaurant--#{$restaurant}{
-            background: no-repeat top/110% url('../img/restaurants/#{$restaurant}.jpg');
+            background: no-repeat top/110% url('../img/restaurants/#{$restaurant}.jpg');            
+            padding-top: 35vh;
+            @include desktop{
+                background-attachment: fixed;
+                padding-bottom: 35vh;
+            }
         }        
     }
 }
 
 @mixin card-shadow{
     box-shadow: 0rem .1rem 1rem .1rem rgba(126, 126, 126, .2);
+}
+
+@mixin mobile{
+    @media screen and (min-width: map-get($breakpoints, mobile)){
+        @content;
+    }
 }
 
 @mixin tablet{
