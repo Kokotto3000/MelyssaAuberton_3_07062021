@@ -30,7 +30,8 @@
             <div class="restaurant__menu-container">
                 <div class="restaurant__menu-title">
                     <h1>Le délice des sens</h1>
-                    <!-- <form action="#" method="POST"> -->
+                    <form class="form-heart">
+                        <!-- <form class="form-heart action="#" method="POST"> -->
                         <button class="btn-heart" type="submit">
                             <svg aria-hidden="false" focusable="true" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <defs>
@@ -42,175 +43,188 @@
                                 <path d="M259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
                             </svg>
                         </button>
-                    <!-- </form> -->
+                    </form>
                 </div>
 
-                <article class="restaurant__menu-section restaurant__menu-section--entrees">
-                    <h2>Entrées</h2>
+                <form class="form-menu"> 
+                <!-- <form class="form-menu" action="#" method="POST"> -->
 
-                    <div class="restaurant__card--1">
-                        <div class="restaurant__card-infos">
-                            <h3>Tartare de thon</h3>
-                            <p>Assaisonné au yuzu</p>
-                        </div>
+                    <article class="restaurant__menu-section restaurant__menu-section--entrees">
+                        <h2>Entrées</h2>
 
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>25€</p>
+                        <div class="restaurant__card--1">
+                            <div class="restaurant__card-infos">
+                                <h3>Tartare de thon</h3>
+                                <p>Assaisonné au yuzu</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="restaurant__card--2">
-                        <div class="restaurant__card-infos">
-                            <h3>Bouchée de homard croustillant</h3>
-                            <p>Et sa farandole de petits légumes</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>35€</p>
-                            </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>25€</p>
+                                </div>
+                                
+                                <label for="tartare" class="restaurant__card-icon">
+                                    <input name="entree" id="tartare" value="tartare" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="restaurant__card--3">
-                        <div class="restaurant__card-infos">
-                            <h3>Velouté de cèpes</h3>
-                            <p>Aux truffes</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>20€</p>
+                        <div class="restaurant__card--2">
+                            <div class="restaurant__card-infos">
+                                <h3>Bouchée de homard croustillant</h3>
+                                <p>Et sa farandole de petits légumes</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
 
-                <article class="restaurant__menu-section restaurant__menu-section--plats">
-                    <h2>Plats</h2>
-
-                    <div class="restaurant__card--1">
-                        <div class="restaurant__card-infos">
-                            <h3>Poulet rôti aux herbes de Provence</h3>
-                            <p>Et sa crème de truffe</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>40€</p>
-                            </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>35€</p>
+                                </div>
+                                
+                                <label for="bouchee" class="restaurant__card-icon">
+                                    <input name="entree" id="bouchee" value="bouchee" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="restaurant__card--2">
-                        <div class="restaurant__card-infos">
-                            <h3>Langouste rôtie</h3>
-                            <p>Et ses légumes de saison</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>35€</p>
+                        <div class="restaurant__card--3">
+                            <div class="restaurant__card-infos">
+                                <h3>Velouté de cèpes</h3>
+                                <p>Aux truffes</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="restaurant__card--3">
-                        <div class="restaurant__card-infos">
-                            <h3>Côte de boeuf Angus</h3>
-                            <p>Et sa purée de panais</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>44€</p>
-                            </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>20€</p>
+                                </div>
+                                
+                                <label for="bouchee" class="restaurant__card-icon">
+                                    <input name="entree" id="bouchee" value="bouchee" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="restaurant__menu-section restaurant__menu-section--desserts">
-                    <h2>Desserts</h2>
-                    
-                    <div class="restaurant__card--1">
-                        <div class="restaurant__card-infos">
-                            <h3>Farandole de desserts</h3>
-                            <p>Du chef</p>
-                        </div>
+                    <article class="restaurant__menu-section restaurant__menu-section--plats">
+                        <h2>Plats</h2>
 
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>18€</p>
+                        <div class="restaurant__card--1">
+                            <div class="restaurant__card-infos">
+                                <h3>Poulet rôti aux herbes de Provence</h3>
+                                <p>Et sa crème de truffe</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="restaurant__card--2">
-                        <div class="restaurant__card-infos">
-                            <h3>Crème brulée</h3>
-                            <p>Revisitée</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>22€</p>
-                            </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>40€</p>
+                                </div>
+                                
+                                <label for="poulet" class="restaurant__card-icon">
+                                    <input name="plat" id="poulet" value="poulet" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="restaurant__card--3">
-                        <div class="restaurant__card-infos">
-                            <h3>Tiramisu</h3>
-                            <p>À la noisette</p>
+                        <div class="restaurant__card--2">
+                            <div class="restaurant__card-infos">
+                                <h3>Langouste rôtie</h3>
+                                <p>Et ses légumes de saison</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>35€</p>
+                                </div>
+                                
+                                <label for="langouste" class="restaurant__card-icon">
+                                    <input name="plat" id="langouste" value="langouste" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
                         </div>
 
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>23€</p>
+                        <div class="restaurant__card--3">
+                            <div class="restaurant__card-infos">
+                                <h3>Côte de boeuf Angus</h3>
+                                <p>Et sa purée de panais</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>44€</p>
+                                </div>
+                                
+                                <label for="cote" class="restaurant__card-icon">
+                                    <input name="plat" id="cote" value="cote" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <a class="btn-pill" href="#">Commander</a>
+                    <article class="restaurant__menu-section restaurant__menu-section--desserts">
+                        <h2>Desserts</h2>
+                        
+                        <div class="restaurant__card--1">
+                            <div class="restaurant__card-infos">
+                                <h3>Farandole de desserts</h3>
+                                <p>Du chef</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>18€</p>
+                                </div>
+                                
+                                <label for="farandole" class="restaurant__card-icon">
+                                    <input name="dessert" id="farandole" value="farandole" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="restaurant__card--2">
+                            <div class="restaurant__card-infos">
+                                <h3>Crème brulée</h3>
+                                <p>Revisitée</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>22€</p>
+                                </div>
+                                
+                                <label for="creme" class="restaurant__card-icon">
+                                    <input name="dessert" id="creme" value="creme" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="restaurant__card--3">
+                            <div class="restaurant__card-infos">
+                                <h3>Tiramisu</h3>
+                                <p>À la noisette</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>23€</p>
+                                </div>
+                                
+                                <label for="tiramisu" class="restaurant__card-icon">
+                                    <input name="dessert" id="tiramisu" value="tiramisu" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <a class="btn-pill" href="#">Commander</a>
+                </form>
             </div>
         </section>
     </main>

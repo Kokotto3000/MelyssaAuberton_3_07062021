@@ -30,8 +30,9 @@
             <div class="restaurant__menu-container">
                 <div class="restaurant__menu-title">
                     <h1>La palette du goût</h1>
-                    <!-- <form action="#" method="POST"> -->
-                        <button class="btn-heart" type="submit">
+                    <form class="form-heart">
+                    <!-- <form class="form-heart action="#" method="POST"> -->
+                        <button class="btn-heart" type="submit" value="like">
                             <svg aria-hidden="false" focusable="true" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <defs>
                                     <linearGradient id="linearGradient">
@@ -42,178 +43,188 @@
                                 <path d="M259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
                             </svg>
                         </button>
-                    <!-- </form> -->
+                    </form>
                 </div>
 
-                <form>
+                <form class="form-menu"> 
+                <!-- <form class="form-menu" action="#" method="POST"> -->
 
-                <article class="restaurant__menu-section restaurant__menu-section--entrees">
-                    <h2>Entrées</h2>
+                    <article class="restaurant__menu-section restaurant__menu-section--entrees">
+                        <h2>Entrées</h2>
 
-                    <div class="restaurant__card--1">
-                        <div class="restaurant__card-infos">
-                            <h3>Fricassée d'escargot</h3>
-                            <p>Au piment d'espelette</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>25€</p>
+                        <div class="restaurant__card--1">
+                            <div class="restaurant__card-infos">
+                                <h3>Fricassée d'escargot</h3>
+                                <p>Au piment d'espelette</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="restaurant__card--2">
-                        <div class="restaurant__card-infos">
-                            <h3>Foie gras de canard mi-cuit</h3>
-                            <p>Et ses copeaux de truffe noire</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>35€</p>
-                            </div>
-                            
-                            <input type="checkbox" class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </input>
-                        </div>
-                    </div>
-
-                    <div class="restaurant__card--3">
-                        <div class="restaurant__card-infos">
-                            <h3>Oeuf au plat</h3>
-                            <p>Assaisonné à la truffe sur lit de caviar</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>20€</p>
-                            </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>25€</p>
+                                </div>
+                                
+                                <label for="escargot" class="restaurant__card-icon">
+                                    <input name="entree" id="escargot" value="escargot" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
-                </article>
 
-                <article class="restaurant__menu-section restaurant__menu-section--plats">
-                    <h2>Plats</h2>
-
-                    <div class="restaurant__card--1">
-                        <div class="restaurant__card-infos">
-                            <h3>Filet de boeuf aux herbes</h3>
-                            <p>Accompagné de sa ribambelle de légumes</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>40€</p>
+                        <div class="restaurant__card--2">
+                            <div class="restaurant__card-infos">
+                                <h3>Foie gras de canard mi-cuit</h3>
+                                <p>Et ses copeaux de truffe noire</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>35€</p>
+                                </div>
+                                
+                                <label for="foie" class="restaurant__card-icon">
+                                    <input name="entree" id="foie" value="foie" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="restaurant__card--2">
-                        <div class="restaurant__card-infos">
-                            <h3>Parmentier de queue de boeuf</h3>
-                            <p>À la truffe noire sur sa purée de panais</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>35€</p>
+                        <div class="restaurant__card--3">
+                            <div class="restaurant__card-infos">
+                                <h3>Oeuf au plat</h3>
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="restaurant__card--3">
-                        <div class="restaurant__card-infos">
-                            <h3>Filet de turbot</h3>
-                            <p>Aux agrumes</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>44€</p>
-                            </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>20€</p>
+                                </div>
+                                
+                                <label for="oeuf" class="restaurant__card-icon">
+                                    <input name="entree" id="oeuf" value="oeuf" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="restaurant__menu-section restaurant__menu-section--desserts">
-                    <h2>Desserts</h2>
-                    
-                    <div class="restaurant__card--1">
-                        <div class="restaurant__card-infos">
-                            <h3>Paris-Brest</h3>
-                            <p>Revisité</p>
-                        </div>
+                    <article class="restaurant__menu-section restaurant__menu-section--plats">
+                        <h2>Plats</h2>
 
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>18€</p>
+                        <div class="restaurant__card--1">
+                            <div class="restaurant__card-infos">
+                                <h3>Filet de boeuf aux herbes</h3>
+                                <p>Accompagné de sa ribambelle de légumes</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="restaurant__card--2">
-                        <div class="restaurant__card-infos">
-                            <h3>Macaron au chocolat d'exception</h3>
-                            <p>Et glace à la vanille de Madagascar</p>
-                        </div>
-
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>22€</p>
-                            </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>40€</p>
+                                </div>
+                                
+                                <label for="filet" class="restaurant__card-icon">
+                                    <input name="plat" id="filet" value="filet" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="restaurant__card--3">
-                        <div class="restaurant__card-infos">
-                            <h3>Mousse au chocolat</h3>
-                            <p>Au piment d'Espelette et à la truffe noire</p>
+                        <div class="restaurant__card--2">
+                            <div class="restaurant__card-infos">
+                                <h3>Parmentier de queue de boeuf</h3>
+                                <p>À la truffe noire sur sa purée de panais</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>35€</p>
+                                </div>
+                                
+                                <label for="parmentier" class="restaurant__card-icon">
+                                    <input name="plat" id="parmentier" value="parmentier" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
                         </div>
 
-                        <div class="restaurant__card-price">
-                            <div>
-                                <p>23€</p>
+                        <div class="restaurant__card--3">
+                            <div class="restaurant__card-infos">
+                                <h3>Filet de turbot</h3>
+                                <p>Aux agrumes</p>
                             </div>
-                            
-                            <div class="restaurant__card-icon">
-                                <p><i class="fas fa-check-circle"></i></p>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>44€</p>
+                                </div>
+                                
+                                <label for="turbot" class="restaurant__card-icon">
+                                    <input name="plat" id="turbot" value="turbot" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <button class="btn-pill" type="submit">Commander</button>
-            </form>
+                    <article class="restaurant__menu-section restaurant__menu-section--desserts">
+                        <h2>Desserts</h2>
+                        
+                        <div class="restaurant__card--1">
+                            <div class="restaurant__card-infos">
+                                <h3>Paris-Brest</h3>
+                                <p>Revisité</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>18€</p>
+                                </div>
+                                
+                                <label for="paris" class="restaurant__card-icon">
+                                    <input name="dessert" id="paris" value="paris" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="restaurant__card--2">
+                            <div class="restaurant__card-infos">
+                                <h3>Macaron au chocolat d'exception</h3>
+                                <p>Et glace à la vanille de Madagascar</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>22€</p>
+                                </div>
+                                
+                                <label for="macaron" class="restaurant__card-icon">
+                                    <input name="dessert" id="macaron" value="macaron" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="restaurant__card--3">
+                            <div class="restaurant__card-infos">
+                                <h3>Mousse au chocolat</h3>
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+
+                            <div class="restaurant__card-price">
+                                <div>
+                                    <p>23€</p>
+                                </div>
+                                
+                                <label for="mousse" class="restaurant__card-icon">
+                                    <input name="dessert" id="mousse" value="mousse" type="checkbox" />
+                                    <span><i class="fas fa-check-circle"></i></span>                                
+                                </label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <button class="btn-pill" type="submit">Commander</button>
+                </form>
             </div>
         </section>
     </main>
