@@ -9,3 +9,15 @@
 @mixin card-shadow{
     box-shadow: 0rem .1rem 1rem .1rem rgba(126, 126, 126, .2);
 }
+
+@mixin tablet{
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
