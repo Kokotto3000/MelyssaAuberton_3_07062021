@@ -1,0 +1,18 @@
+.form-heart{
+    width: 3rem;
+    height: 3rem;
+}
+
+.form-menu{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input{
+        display: none;
+        &:checked + span{
+            transform: scale(2);
+        } 
+    }
+}
