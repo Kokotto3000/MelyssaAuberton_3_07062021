@@ -1,7 +1,7 @@
 .btn-pill{
     display: block;
-    background: radial-gradient(ellipse farthest-corner at 1rem 1rem, $secondary 0%, $primary 120%);
-    background-color: $secondary;
+    background: radial-gradient(ellipse farthest-corner at 1rem 1rem, $secondary-color 0%, $primary-color 120%);
+    background-color: $secondary-color;
     @include card-shadow;
     border-radius: 3rem;
     color: white;
@@ -16,7 +16,7 @@
         box-shadow: 0rem .1rem 1rem .1rem rgba(126, 126, 126, .8);
     }
     &:active, &:focus{
-        background: $secondary;
+        background: $secondary-color;
         box-shadow: none;
     }
 }

@@ -1,7 +1,7 @@
 @include restaurant($restaurants);
 
 .restaurant__menu{
-    background-color: $grey-light;
+    @include background-shades(92%);
     border-radius: 4rem 4rem 0 0;
     @include desktop{
         background-color: rgba(234, 234, 234, .5);
@@ -29,7 +29,7 @@
     width: 100%;
     h1{
         font-size: 2.8rem;
-        font-family: $shrikhand;
+        font-family: $title-font;
         font-weight: 300;
     }
     .btn-heart{
@@ -45,7 +45,7 @@
         font-weight: 300;
         &::after{
             content: '';
-            background: $tertiary;
+            background: $tertiary-color;
             display: block;
             width: 4.5rem;
             height: 0.3rem;
@@ -104,7 +104,7 @@
     }
 }
 .restaurant__card-price{
-    color: $grey-dark;
+    @include font-shades(21%);
     display: flex;
     align-items: stretch;
     position: relative;
@@ -113,7 +113,7 @@
         height: 100%;
         transform: translateX(100%);
         content: '';
-        background: $tertiary;  
+        background: $tertiary-color;  
         transition: 1s all 0.1s ease; 
     }
     div:first-child{

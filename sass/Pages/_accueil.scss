@@ -8,10 +8,10 @@
         box-shadow: 0 1rem 1rem -1rem rgba(0,0,0,0.5) inset;
         display: flex;
         justify-content: center;
-        background-color: $grey-light;
+        @include background-shades(92%);
         width: 100%;
         padding: 1.6rem 0;
-        color: $grey-dark;
+        @include font-shades(21%);
         font-size: 1.8rem;
         font-weight: 500;
         vertical-align: middle;
@@ -23,7 +23,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $grey-very-light;
+        @include background-shades(96%);
         width: 100%;
         padding: 3rem 0;
         h1{
@@ -57,12 +57,12 @@
             box-shadow: none;
         }
         &:active .accueil-fonctionnement__content .fas, &:focus .accueil-fonctionnement__content .fas{
-            color: $primary;
+            color: $primary-color;
         }            
     }         
     .accueil-fonctionnement__card{
         position: relative;
-        background-color: $grey-very-light;
+        @include background-shades(96%);
         @include card-shadow;
         padding: 2.5rem 0;
         width: 95%;
@@ -74,7 +74,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $primary;
+            background-color: $primary-color;
             border-radius: 50%;
             color: white;
             position: absolute;
@@ -90,7 +90,7 @@
         justify-content: flex-start;
         align-items: center;
         .fas{
-            color: $grey-medium;
+            @include font-shades(49%);
             font-size: 2rem;
             padding: 0 3rem;
         }    
@@ -98,7 +98,7 @@
 }
 
 .accueil-restaurants{
-    background-color: $grey-very-light;
+    @include background-shades(96%);
     padding: 3rem 0;
     .accueil-restaurants__container{
         width: 90%;
@@ -136,7 +136,7 @@
                 width: 100%;
             }
             p{
-                background-color: $tertiary;
+                background-color: $tertiary-color;
                 color: #008766;
                 border-radius: .3rem;
                 position: absolute;

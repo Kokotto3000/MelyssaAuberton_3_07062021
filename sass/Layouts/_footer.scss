@@ -1,7 +1,7 @@
 //FOOTER
 
 footer{
-    background-color: $grey-dark;
+    @include background-shades(21%);
     color: white;
     padding: 1rem 0 3rem 0;
     .footer-container{
@@ -9,7 +9,7 @@ footer{
         margin: 0 auto;
     }
     h3{
-        font-family: $shrikhand;
+        font-family: $title-font;
         font-size: 1.8rem;
         font-weight: 400;
         padding: 1rem 0;
@@ -17,7 +17,7 @@ footer{
     a{
         color: white;
         &:hover, &:focus, &:active{
-            color: $secondary;
+            color: $secondary-color;
             transform: scale(1.1);
         }
     }

@@ -10,14 +10,14 @@ header{
         color: #353535;
         padding: 3rem 0 1.5rem 0;
         .fa-arrow-left{
-            color: $grey-dark;
+            @include font-shades(21%);
             font-size: 3rem;
             position: absolute;
             top: 50%;
             left: 5%;
             transform: translate(0, -50%);
             &:hover, &:active, &:focus{
-                color: $secondary;
+                color: $secondary-color;
                 scale: 1.1;
             }
         }      
