@@ -1,20 +1,20 @@
 @include restaurant($restaurants);
 
 .restaurant__menu{
-    @include background-shades(92%);
+    @include background-color(92%);
     border-radius: 4rem 4rem 0 0;
     @include desktop{
         background-color: rgba(234, 234, 234, .5);
-        max-width: 50%;
-        margin: 0 auto;
         border-radius: 4rem;
+        margin: 0 auto;
+        max-width: 70%;
     }
     .restaurant__menu-container{
-        width: 90%;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;        
+        width: 90%;
     }
     .btn-pill{
         width: 50%;
@@ -28,8 +28,8 @@
     padding: 3rem 0;
     width: 100%;
     h1{
-        font-size: 2.8rem;
         font-family: $title-font;
+        font-size: 2.8rem;    
         font-weight: 300;
     }
     .btn-heart{
@@ -37,12 +37,12 @@
     }
 }
 
-.restaurant__menu-section{
-    width: 100%;
+.restaurant__menu-section{    
     margin-bottom: 2rem;
-    h2{
-        text-transform: uppercase;
+    width: 100%;
+    h2{    
         font-weight: 300;
+        text-transform: uppercase;
         &::after{
             content: '';
             background: $tertiary-color;
@@ -56,24 +56,23 @@
 
 @for $i from 1 through 4{
     .restaurant__card--#{$i} {
-        @include card-shadow;
         display: flex;
         justify-content: space-between;
         align-items: stretch;
         background-color: white;
-        margin: 0 auto;
         border-radius: 2rem;
+        @include card-shadow;    
         font-weight: 500;
         margin: 1.5rem auto;
-        width: 100%;
-        overflow: hidden;
         opacity: 0;
+        overflow: hidden;
+        width: 100%;
         transform: translateY(2rem);
         animation: 1500ms intro 2000ms+$i*250 ease-in-out forwards;    
         &:hover .restaurant__card-price::after, &:active .restaurant__card-price::after, &:focus .restaurant__card-price::after{
-            width: 7rem;
             transform: translateX(0);
-            transform-origin: right;           
+            transform-origin: right;
+            width: 7rem;           
         }
         &:hover .restaurant__card-icon, &:active .restaurant__card-icon, &:focus .restaurant__card-icon{
             left: 50%;
@@ -82,38 +81,32 @@
     }
 }
 
-.restaurant__card-infos{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    padding: 1.3rem;
-    h3{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        font-weight: 600;
+.restaurant__card-infos{ 
+    @include ellipsis;
+    padding: 1.3rem;    
+    h3{ 
+        @include ellipsis;   
         font-size: 1.8rem;
-        margin: .5rem 0;
+        font-weight: 600;        
+        margin: .5rem 0;        
     }
     p{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        font-weight: 300;
+        @include ellipsis;
         font-size: 1.5rem;
+        font-weight: 300;        
     }
 }
 .restaurant__card-price{
-    @include font-shades(21%);
     display: flex;
     align-items: stretch;
     position: relative;
+    @include font-color(21%);    
     &::after{
-        width: 0;    
-        height: 100%;
-        transform: translateX(100%);
+        background: $tertiary-color;    
         content: '';
-        background: $tertiary-color;  
+        height: 100%;
+        width: 0;
+        transform: translateX(100%);  
         transition: 1s all 0.1s ease; 
     }
     div:first-child{
@@ -124,15 +117,15 @@
     }
 }
 .restaurant__card-icon{
-    color: white;
-    position: absolute;
-    left: 100%;
-    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    position: absolute;
+    left: 100%;
+    color: white;
     font-size: 3rem;
+    z-index: 2;    
+    height: 100%;
     transition: 1s all ease;
 }

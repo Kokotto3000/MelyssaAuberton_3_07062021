@@ -1,24 +1,36 @@
-//FOOTER
-
 footer{
-    @include background-shades(21%);
-    color: white;
+    @include background-color(21%);
+    @include font-color(100%);
     padding: 1rem 0 3rem 0;
-    .footer-container{
-        width: 90%;
+    .footer-container{        
         margin: 0 auto;
+        width: 90%;
+        @include desktop{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
     }
     h3{
         font-family: $title-font;
         font-size: 1.8rem;
         font-weight: 400;
         padding: 1rem 0;
+        flex-basis: 30%;
     }
     a{
-        color: white;
+        @include font-color(100%);
         &:hover, &:focus, &:active{
             color: $secondary-color;
             transform: scale(1.1);
+        }
+    }
+    ul{
+        @include desktop{
+            display: flex;
+            justify-content: space-around;
+            flex-basis: 70%;
         }
     }
     li{
@@ -35,5 +47,8 @@ footer{
     }
     .fa-hands-helping{
         font-size: 1rem;
+        @include desktop{
+            font-size: 1.5rem;
+        }
     }
 }

@@ -1,13 +1,19 @@
-@mixin font-shades ($shade: 0%, $color: $main-font-color) {
+@mixin font-color ($shade: 0%, $color: $main-font-color) {
     color: lighten($color, $shade);
 }
 
-@mixin background-shades ($shade: 0%, $color: $main-font-color) {
+@mixin background-color ($shade: 0%, $color: $main-font-color) {
     background-color: lighten($color, $shade);
 }
 
 @mixin card-shadow{
     box-shadow: 0rem .1rem 1rem .1rem rgba(126, 126, 126, .2);
+}
+
+@mixin ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @mixin restaurant($restaurants){

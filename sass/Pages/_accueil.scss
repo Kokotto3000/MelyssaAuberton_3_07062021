@@ -1,20 +1,20 @@
-.accueil-heading{
-    width: 100%;
+.accueil-heading{    
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
     .accueil-heading__localisation{
-        box-shadow: 0 1rem 1rem -1rem rgba(0,0,0,0.5) inset;
         display: flex;
         justify-content: center;
-        @include background-shades(92%);
-        width: 100%;
-        padding: 1.6rem 0;
-        @include font-shades(21%);
+        @include background-color(92%);
+        box-shadow: 0 1rem 1rem -1rem rgba(0,0,0,0.5) inset;
+        @include font-color(21%);
         font-size: 1.8rem;
         font-weight: 500;
+        padding: 1.6rem 0;
         vertical-align: middle;
+        width: 100%;
         p:last-child{
             padding: 0 3rem;
         }
@@ -23,9 +23,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include background-shades(96%);
-        width: 100%;
+        @include background-color(96%);        
         padding: 3rem 0;
+        width: 100%;
         h1{
             padding: 1rem 5rem;
         }
@@ -38,20 +38,26 @@
 .accueil-fonctionnement{
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    width: 90%;
+    align-items: stretch;    
     margin: 0 auto;
     padding: 5rem 0;
+    width: 90%;
     .accueil-fonctionnement__container{
         display: flex;
-        flex-direction: column;
+        flex-flow: column wrap;
         justify-content: space-between;
         padding: 2rem 0;
+        @include desktop{
+            flex-flow: row wrap;
+        }
     }
     a{
         display: block;
         margin: 1rem 0;
         width: 100%;
+        @include desktop{
+            flex-basis: 32%;
+        }
         &:active .accueil-fonctionnement__card, &:focus .accueil-fonctionnement__card{
             background-color: #f5edff;
             box-shadow: none;
@@ -62,27 +68,25 @@
     }         
     .accueil-fonctionnement__card{
         position: relative;
-        @include background-shades(96%);
+        @include background-color(96%);
+        border-radius: 2rem;
         @include card-shadow;
+        font-weight: 500;        
+        margin: 1rem auto;
         padding: 2.5rem 0;
         width: 95%;
-        margin: 0 auto;
-        border-radius: 2rem;
-        font-weight: 500;
-        margin: 1rem auto;
         & > p{
             display: flex;
             justify-content: center;
             align-items: center;
+            position: absolute;            
+            left: 0;
+            top: 50%;
             background-color: $primary-color;
             border-radius: 50%;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(-50%, -50%);
-            height: 2.5rem;
+            color: white;height: 2.5rem;
             width: 2.5rem;
+            transform: translate(-50%, -50%);
         }
     }
     .accueil-fonctionnement__content{
@@ -90,7 +94,7 @@
         justify-content: flex-start;
         align-items: center;
         .fas{
-            @include font-shades(49%);
+            @include font-color(49%);
             font-size: 2rem;
             padding: 0 3rem;
         }    
@@ -98,32 +102,40 @@
 }
 
 .accueil-restaurants{
-    @include background-shades(96%);
+    @include background-color(96%);
     padding: 3rem 0;
     .accueil-restaurants__container{
-        width: 90%;
-        margin: 0 auto;   
+        margin: 0 auto;
+        width: 90%;   
     }
     h3{
         padding: 2rem 0;
     }
     .accueil-restaurants__cards{
         display: flex;
-        flex-direction: column;
+        flex-flow: column wrap;
+        @include desktop{
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
     }
     article.accueil-restaurants__card{        
+        position: relative;
         background-color: white;
         @include card-shadow;
-        border-radius: 2rem;
+        border-radius: 2rem;        
+        margin: 1rem 0;        
         height: 25rem;
-        margin: 1rem 0;
-        position: relative;
+        width: 100%;
+        @include desktop{
+            flex-basis: 49%;
+            height: 30rem;
+        }
         a{
-            display: block;
-            width: 100%;
-            height: 100%;
             display: flex;
-            flex-direction: column;
+            flex-direction: column;                     
+            height: 100%;
+            width: 100%;   
         }
         .accueil-restaurants__card-image{
             position: relative;
@@ -136,34 +148,33 @@
                 width: 100%;
             }
             p{
-                background-color: $tertiary-color;
-                color: #008766;
-                border-radius: .3rem;
-                position: absolute;
-                top: 1.5rem;
+                position: absolute;                
                 right: 1.5rem;
-                padding: 0.6rem 1.2rem;
+                top: 1.5rem;
+                background-color: $tertiary-color;
+                border-radius: .3rem;
+                color: #008766;                
                 font-size: 1.2rem;
                 font-weight: 500;
+                padding: 0.6rem 1.2rem;                
             }    
         }
         .accueil-restaurants__card-content{
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            height: 28%;
+            align-items: center;            
             padding: 0 1rem;
+            height: 28%;
             div{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-            }
-            
+            }            
         } 
         .form-heart{
             position: absolute;
-            right: 7%;
             bottom: 10%;
+            right: 7%;            
             z-index: 2;
         }
     }

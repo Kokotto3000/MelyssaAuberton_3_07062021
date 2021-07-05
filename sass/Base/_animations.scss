@@ -16,37 +16,37 @@
 
 @keyframes heart {
     0% {
-    transform: scale(0.95);
-    fill: $secondary-color;
+        fill: $secondary-color;
+        transform: scale(0.95);    
     }
     5% {
-    transform: scale(1.1);
-    fill: $primary-color;
+        fill: $primary-color;
+        transform: scale(1.1);        
     }
     39% {
-    transform: scale(0.85);
-    fill: $secondary-color;
+        fill: $secondary-color;
+        transform: scale(0.85);        
     }
     45% {
-    transform: scale(1);
-    fill: $primary-color;
+        transform: scale(1);
+        fill: $primary-color;
     }
     60% {
-    transform: scale(0.95);
+        transform: scale(0.95);
     }
     100% {
-    transform: scale(0.9);
-    fill: $secondary-color;
+        fill: $secondary-color;
+        transform: scale(0.9);        
     }
 }        
 
 @keyframes heart-like{
     0%{
         fill: url('#linearGradient');
-        fill-opacity: 0;
-        stroke-opacity: 1;
+        fill-opacity: 0;        
         stroke-dasharray: 90;
         stroke-dashoffset: 0;
+        stroke-opacity: 1;
     }40%{
         stroke-dashoffset: 90;
     }50%{
@@ -55,11 +55,11 @@
         stroke-dasharray: 0;
         stroke-dashoffset: 180;
     }100%{
-        stroke-opacity: 1;
-        fill-opacity: 1;
-        fill: url('#linearGradient');
+        fill: url('#linearGradient');        
+        fill-opacity: 1;        
         stroke: url('#linearGradient');
         stroke-dashoffset: 10;
+        stroke-opacity: 1;
     }
 }
 
