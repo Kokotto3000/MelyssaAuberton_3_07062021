@@ -68,7 +68,7 @@
         overflow: hidden;
         width: 100%;
         transform: translateY(2rem);
-        animation: 1500ms intro 2000ms+$i*250 ease-in-out both;    
+        animation: 1500ms intro $i*200ms ease-in-out both;    
         &:hover .restaurant__card-price::after, &:active .restaurant__card-price::after, &:focus .restaurant__card-price::after{
             transform: translateX(0);
             transform-origin: right;
